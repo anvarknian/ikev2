@@ -25,7 +25,7 @@ services:
       - VPNPASSWORD=example
       # Pick one of the following if you want the VPN
       # to connect automatically on certain WiFi networks
-      # - INCLUDE_SSIDS="SSID1, SSID2"
+      - INCLUDE_SSIDS="SSID1, SSID2"
       # or to connect on all WiFi networks except for these
       # - EXCLUDE_SSIDS="SSID1, SSID2"
       # ...or nothing at all
