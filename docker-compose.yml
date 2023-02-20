@@ -10,7 +10,7 @@ services:
     ports:
       - 4500:4500/udp
       - 500:500/udp
-      - 80:80/tcp 
+      - 80:80/tcp
       # Only needed during the first run for Let's Encrypt 
       # certificates, feel free to remove it afterwards
     privileged: yes
