@@ -15,8 +15,8 @@ services:
       # certificates, feel free to remove it afterwards
     privileged: yes
     volumes:
-      - /docker-persistent-data/ikev2/config:/config
-      - /docker-persistent-data/ikev2/letsencrypt:/etc/letsencrypt
+      - ./docker-persistent-data/ikev2/config:/config
+      - ./docker-persistent-data/ikev2/letsencrypt:/etc/letsencrypt
     environment:
       - DNS_SERVERS="1.1.1.1, 1.0.0.1"
       - VPNHOST=vpn.example.com
