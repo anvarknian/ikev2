@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.04 AS dev
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y upgrade \
@@ -13,4 +13,5 @@ RUN apt-get update \
 ADD ./bin/* /usr/bin/
 ADD ./conf/charon-logging.conf /etc/strongswan.d/charon-logging.conf
 
+FROM dev AS prod
 ENTRYPOINT /usr/bin/run
