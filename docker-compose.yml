@@ -19,13 +19,13 @@ services:
       - ./docker-persistent-data/ikev2/letsencrypt:/etc/letsencrypt
     environment:
       - DNS_SERVERS="1.1.1.1, 1.0.0.1"
-      - VPNHOST=vpn.example.com
+      - VPNHOST=0.0.0.0.xip.io
       - EMAILADDR=example@mail.com
       - VPNUSERNAME=example
       - VPNPASSWORD=example
       # Pick one of the following if you want the VPN
       # to connect automatically on certain WiFi networks
-      - INCLUDE_SSIDS="SSID1, SSID2"
+      # - INCLUDE_SSIDS="SSID1, SSID2"
       # or to connect on all WiFi networks except for these
       # - EXCLUDE_SSIDS="SSID1, SSID2"
       # ...or nothing at all
